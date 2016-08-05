@@ -1,0 +1,18 @@
+<script src="//cdn.rawgit.com/jpillora/xdomain/0.7.4/dist/xdomain.min.js" slave="https://noornoor.github.io/quranapi/proxy.html"></script>
+
+<script>
+debugger;
+//do some vanilla XHR
+var xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://noornoor.github.io/quranapi/1.json');
+xhr.onreadystatechange = function(e) {
+  if(xhr.readyState === 4)
+    console.log("got result: ", xhr.responseText);
+};
+xhr.send();
+
+//or using jQuery...
+//$.get('http://xyz.example.com/secret/file.txt').done(function(data) {
+//  console.log("got result: ", data);
+//});
+</script>
